@@ -35,9 +35,6 @@ COPY package-lock.json package-lock.json
 COPY sbom.json sbom.json
 COPY server.js server.js
 
-RUN mkdir -p .git/refs/heads
-COPY .git/refs/heads/master .git/refs/heads/master
-
 COPY update-info.sh update-info.sh
 
 RUN npm ci --omit=dev
